@@ -1,0 +1,19 @@
+AARAV SHARMA
+aarav.sharma@example.com | +91 98765 43210 | Pune
+
+OBJECTIVE
+Final-year Computer Engineering student passionate about Natural Language Processing and Generative AI.
+
+EDUCATION
+B.E. Computer Engineering, 2023-2027, CGPA 8.7
+
+SKILLS
+Python, NLP, spaCy, NLTK, Hugging Face Transformers, BERT, PyTorch, LangChain, Prompt Engineering, FAISS, FastAPI, Git, SQL
+
+PROJECTS
+- Fake News Detection: fine-tuned BERT for text classification, achieved 92% F1.
+- PDF Chatbot: built a retrieval augmented generation (RAG) chatbot using LangChain, OpenAI API and FAISS vector database.
+- Named entity recognition for legal documents using spaCy.
+
+INTERNSHIP
+AI Intern, TextMind Labs (3 months) - sentiment analysis of customer reviews and deployment with Docker.

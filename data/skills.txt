@@ -1,0 +1,269 @@
+python
+java
+c++
+javascript
+typescript
+kotlin
+sql
+html
+css
+tailwind css
+react
+redux
+node.js
+express.js
+spring boot
+fastapi
+flask
+django
+rest api
+microservices
+mysql
+postgresql
+mongodb
+redis
+sqlite
+firebase
+kafka
+machine learning
+deep learning
+natural language processing
+computer vision
+statistics
+data visualization
+data analysis
+pandas
+numpy
+scikit-learn
+tensorflow
+pytorch
+keras
+opencv
+cnn
+bert
+transformers
+hugging face
+spacy
+nltk
+llm
+prompt engineering
+langchain
+rag
+vector databases
+faiss
+chromadb
+openai api
+text classification
+named entity recognition
+sentiment analysis
+matplotlib
+tableau
+power bi
+excel
+a/b testing
+docker
+kubernetes
+aws
+azure
+gcp
+ec2
+s3
+lambda
+terraform
+ansible
+jenkins
+github actions
+ci/cd
+mlops
+linux
+shell scripting
+git
+prometheus
+grafana
+android
+android studio
+jetpack compose
+flutter
+figma
+ui/ux
+network security
+penetration testing
+wireshark
+firewalls
+siem
+ethical hacking
+cryptography
+networking
+c#
+.net
+asp.net
+entity framework
+hibernate
+jsp
+maven
+junit
+php
+bootstrap
+jquery
+wordpress
+swift
+swiftui
+ios
+xcode
+core data
+hadoop
+spark
+hive
+pig
+hbase
+sqoop
+scala
+airflow
+snowflake
+bigquery
+etl
+informatica
+talend
+ssis
+data warehousing
+data modeling
+oracle
+pl/sql
+sql server
+performance tuning
+backup and recovery
+blockchain
+solidity
+ethereum
+smart contracts
+hyperledger
+web3
+truffle
+selenium
+testng
+cucumber
+postman
+api testing
+manual testing
+regression testing
+test cases
+test plans
+jira
+sdlc
+stlc
+sap
+sap abap
+sap fico
+sap mm
+sap sd
+sap hana
+autocad
+solidworks
+catia
+ansys
+gd&t
+lean manufacturing
+quality control
+production planning
+staad pro
+revit
+estimation
+site supervision
+plc
+scada
+matlab
+power systems
+electrical design
+tcp/ip
+routing and switching
+vpn
+ccna
+recruitment
+onboarding
+payroll
+employee engagement
+hrms
+performance appraisal
+labour law
+b2b sales
+lead generation
+crm
+salesforce
+negotiation
+market research
+seo
+social media marketing
+google ads
+email marketing
+google analytics
+content writing
+copywriting
+proofreading
+business analysis
+requirements gathering
+gap analysis
+brd
+user stories
+stakeholder management
+product roadmap
+agile
+scrum
+project management
+risk management
+ms project
+pmp
+budgeting
+supply chain
+logistics
+inventory management
+six sigma
+vendor management
+erp
+photoshop
+illustrator
+coreldraw
+indesign
+premiere pro
+video editing
+adobe xd
+wireframing
+prototyping
+user research
+usability testing
+typography
+branding
+litigation
+legal drafting
+contract drafting
+legal research
+corporate law
+civil law
+compliance
+personal training
+nutrition
+fitness training
+yoga
+first aid
+tally
+gst
+tds
+accounting
+taxation
+bank reconciliation
+financial reporting
+financial analysis
+financial modeling
+valuation
+zendesk
+freshdesk
+customer service
+xgboost
+lightgbm
+mern
+mern stack
+next.js
+vue
+angular
+graphql
+catboost
+streamlit

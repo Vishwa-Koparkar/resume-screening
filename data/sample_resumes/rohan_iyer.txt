@@ -1,0 +1,17 @@
+ROHAN IYER
+rohan.iyer@example.com | +91 99887 76655 | Bengaluru
+
+PROFILE
+Cloud and DevOps enthusiast with 2 years of experience automating infrastructure.
+
+SKILLS
+Linux, Bash, Python, Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, Ansible, AWS (EC2, S3, Lambda), Azure, Prometheus, Grafana, Git
+
+EXPERIENCE
+Systems Engineer, NetOps Pvt Ltd (2024 - present)
+- Set up CI/CD pipelines for 15 microservices.
+- Migrated on-premise workloads to AWS using Terraform.
+- Configured monitoring and alerting with Prometheus and Grafana.
+
+CERTIFICATIONS
+AWS Certified Cloud Practitioner

@@ -1,0 +1,16 @@
+SNEHA KULKARNI
+sneha.k@example.com | +91 90000 11122 | Chennai
+
+CAREER OBJECTIVE
+Detail-oriented graduate seeking a data analyst role.
+
+EDUCATION
+B.Sc. Statistics, 2022-2025
+
+SKILLS
+Excel, SQL, Python, Pandas, NumPy, Matplotlib, Power BI, Tableau, Statistics, Data Visualization
+
+PROJECTS
+- Sales dashboard in Power BI for a retail dataset.
+- Exploratory data analysis of COVID-19 data using pandas and Matplotlib.
+- Customer churn prediction using scikit-learn logistic regression.
