@@ -5,6 +5,7 @@ import streamlit as st
 from nlp_utils import (extract_skills, extract_required_skills, extract_email, extract_phone, extract_name, extract_links,
                        extract_education, extract_experience_years, experience_level, extract_sections,
                        parse_skill_list, skill_gap, summarize, read_resume)
+from live_jobs import fetch_live_jobs
 from llm import get_client, analyze_resume, recommend_jobs, screen_resume, MODEL
 
 st.set_page_config(page_title="Resume Screening", layout="wide")
@@ -12,6 +13,8 @@ st.title("Resume Screening and Job Recommendation")
 
 api_key = st.sidebar.text_input("Gemini API Key", value=os.environ.get("GEMINI_API_KEY", ""), type="password")
 st.sidebar.write("Model:", MODEL)
+rapidapi_key = st.sidebar.text_input("RapidAPI Key (for live jobs)", value=os.environ.get("RAPIDAPI_KEY", ""),
+                                     type="password")
 if not api_key:
     st.warning("Enter your Gemini API key in the sidebar to start.")
     st.stop()
@@ -131,7 +134,40 @@ with tab1:
             show_match_card(job["title"], f"{job['company']} | {job['location']} | {job['experience']}",
                             rec["match_score"], rec["reason"], matched, missing)
 
-        st.header("5. Check Match for Your Own Job")
+        st.header("5. Live Job Openings")
+        st.caption("Current openings from LinkedIn, Naukri, Indeed, Unstop and other job sites, fetched live "
+                   "through the JSearch API. The LLM picks job titles that suit your resume, searches for them "
+                   "and ranks the openings.")
+        if not rapidapi_key:
+            st.info("Enter your RapidAPI key in the sidebar to see live openings.")
+        else:
+            live_location = st.text_input("Location (optional)", placeholder="e.g. Bengaluru")
+            st.write("**Searching for:**", ", ".join(analysis["job_titles"]))
+            with st.spinner("Searching live job openings..."):
+                try:
+                    live_jobs = fetch_live_jobs(rapidapi_key, tuple(analysis["job_titles"]), live_location.strip())
+                    live_recs = []
+                    if live_jobs:
+                        live_text = "\n".join(f"{j['job_id']} | {j['title']} | {j['description'][:600]}"
+                                              for j in live_jobs)
+                        live_recs = recommend_jobs(client, text, live_text, top_n=min(5, len(live_jobs)))
+                except Exception as e:
+                    st.error(f"Live job search failed: {e}")
+                    live_jobs, live_recs = [], []
+            live_by_id = {j["job_id"]: j for j in live_jobs}
+            if not live_by_id:
+                st.write("No live openings found. Try a different location.")
+            for rec in live_recs:
+                job = live_by_id.get(rec["job_id"])
+                if not job:
+                    continue
+                matched, missing = skill_gap(text, extract_required_skills(job["description"]))
+                details = " | ".join(x for x in [job["company"], job["location"], job["type"]] if x)
+                show_match_card(job["title"], details, rec["match_score"], rec["reason"], matched, missing)
+                st.markdown(f"[Apply on {job['source'] or 'job site'}]({job['link']})"
+                            + (f" (posted {job['posted']})" if job["posted"] else ""))
+
+        st.header("6. Check Match for Your Own Job")
         st.write("Have a specific job in mind? Enter its details to see how well your resume fits.")
         with st.form("own_job_form"):
             own = custom_job_inputs("own")
@@ -153,7 +189,7 @@ with tab1:
             show_match_card(own["title"], own["company"], result["match_score"], result["reason"],
                             matched, missing)
 
-        st.header("6. AI Resume Feedback (LLM)")
+        st.header("7. AI Resume Feedback (LLM)")
         col1, col2 = st.columns(2)
         with col1:
             st.subheader("Strengths")

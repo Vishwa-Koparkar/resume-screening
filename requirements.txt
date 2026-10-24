@@ -3,3 +3,4 @@ nltk
 streamlit
 pypdf
 google-genai
+requests

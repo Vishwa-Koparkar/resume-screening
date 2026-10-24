@@ -53,6 +53,9 @@ their education, main skills, strongest projects or experience, and the kind of 
 "strengths": list of 3 short strengths of the resume
 "improvements": list of 3 short, specific suggestions to improve the resume
 "interview_questions": list of 5 technical interview questions based on the resume
+"job_titles": list of 3 different job titles to search for on job sites, matching the candidate's skills,
+projects and experience level (for students and freshers use titles like "Intern" or "Junior", e.g.
+"NLP Engineer", "Machine Learning Intern")
 
 Resume:
 {resume_text[:6000]}"""
